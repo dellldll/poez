@@ -1445,6 +1445,10 @@ body.modern #imagine{
         height:auto;
         max-height:none;
 
+
+
+
+
         margin-top:0;
         padding:3rem 0;
 
@@ -1468,7 +1472,7 @@ body.modern #imagine{
     #strofe{
         position:static;
         margin-top:2em;
-    
+        font-size:1.2em;
         text-align:left;
     }
 
@@ -1488,6 +1492,7 @@ body.modern #imagine{
 
 
 }
+
 
 
 
