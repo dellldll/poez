@@ -1167,7 +1167,7 @@ body.modern #header h2:hover::after{
 }
 
 #modernBtn.active{
-    transform: translateY(28%) scale(1.3);
+    transform: translateY(28%) scale(1.25);
     color:#555555;
 }
 /*#header2 h1::before{
@@ -1489,7 +1489,10 @@ body.modern #imagine{
         display:none;
     }
 
-
+#modernBtn.active{
+    transform: translateY(28%) scale(1.2);
+    color:#555555;
+}
 
 }
 
