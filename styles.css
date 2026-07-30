@@ -1,0 +1,1567 @@
+:root{
+ /*--primary-bg-color: #C5C6C7;
+ --border-color: #333333;
+ --good-color:hsla(0, 0%, 40%, 0.801);;
+ --middle-underline-color1:#221f1f;
+ --middle-underline-color2: #C5C6C7;
+ --test:hsl(0, 0%, 46%); */
+
+
+    --primary-bg-color: #E8E0D1;      /* hârtie veche */
+    --good-color: #7e6a53;            /* maro-gri cald */
+    --border-color: #4B392B;          /* lemn închis */
+
+    --middle-underline-color1: #5C4632;
+    --middle-underline-color2: #E8E0D1;
+
+    --test: #8A7256;
+
+    --middle-underline-color3: #A37A49; /* bronz */
+    --middle-underline-color4: #7A6752;
+
+}
+
+@font-face {
+    font-family: "Montenegrin Gothic One";
+    src: url('fonts/MontenegrinGothicOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "EB Garamond";
+    src: url('fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url('fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Instrument Serif";
+    src: url('fonts/InstrumentSerif-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family:"IM Fell Double Pica SC";
+    src: url(fonts/IMFellDoublePicaSC-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url(fonts/Cinzel-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Cormorant SC";
+    src: url(fonts/CormorantSC-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Baskervville";
+    src: url(fonts/Baskervville-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family:  "Montserrat";
+    src: url(fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+body.modern{
+
+  --primary-bg-color: #CBCFD2;   /* chrome */
+    --good-color: #56575C;         /* graphite */
+    --border-color: #0F161E;       /* abyss */
+    --middle-underline-color1:#221f1f;
+    --middle-underline-color2: #CBCFD2;
+    --test:hsl(0, 0%, 46%); 
+   /* --middle-underline-color3:#60488b; */
+   --middle-underline-color3:#495A72;
+   --middle-underline-color4:#56575C;
+
+  overflow:auto;
+
+}
+
+body.modern ::-webkit-scrollbar-track{
+    background:#25282D;
+}
+
+body.modern ::-webkit-scrollbar-thumb{
+    background:#6B7178;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    margin:0;
+    display:grid;
+    grid-template-columns: 1fr 1.5fr 1fr ;
+    background-color: var(--primary-bg-color);
+    box-sizing: border-box;
+    /*overflow: hidden; */
+   
+    overflow:auto;
+    transition: background-color 0.6s ease, color 0.6s ease;
+
+}
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#DDD0BB;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#8B6A47;
+    border-radius:10px;
+}
+
+#mobile-header{
+    
+    width:100%;
+    height:20%;
+    
+    margin:0;
+
+
+    display:flex;
+    flex-direction: column;     
+    justify-content: center;  
+    align-items: flex-end;    
+    padding-right: 2%;
+    padding-top:5%;     
+    padding-bottom:2%;
+    box-sizing: border-box;
+    text-align:center;
+    
+    overflow:hidden; 
+
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none; 
+    
+    background-color:var(--good-color);
+    border-bottom:2px solid var(--border-color);
+    
+
+    display:none;
+}
+#mobile-header h1{
+    font-family: "IM Fell Double Pica SC", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.5rem, 3.5vw, 3em);
+    text-align:right;
+    margin:0;
+    display:inline-block;
+    position:relative;
+    color: #111317;
+    transition: scale 1s ease;
+    font-weight: bold;
+    
+}
+
+body.modern #mobile-header h1{
+    font-family:  "Cinzel", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.5rem, 3.5vw, 3em);
+    text-align:right;
+    margin:0;
+    display:inline-block;
+    position:relative;
+    color: #111317;
+    transition: scale 1s ease;
+    font-weight: bold;
+    
+}
+
+#mobile-header h2{
+    font-family: "IM Fell Double Pica SC", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.1rem, 2.5vw, 2.5em);
+   text-align:right;
+   margin:0;
+   position:relative;
+   display:inline-block;
+   transition: scale 1s ease;
+   color: rgb(5, 1, 1);
+   font-weight:bold;
+}
+
+body.modern #mobile-header h2{
+    font-family:  "Cinzel", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.1rem, 2.5vw, 2.5em);
+   text-align:right;
+   margin:0;
+   position:relative;
+   display:inline-block;
+   transition: scale 1s ease;
+   color: rgb(5, 1, 1);
+   font-weight:bold;
+}
+
+#mobile-header h1::before{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:3%;
+    bottom:0%;
+    right:-10%;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color2) 50%, rgba(0, 0, 0, 0) 100%);
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern  #mobile-header  h1::before{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:3%;
+    bottom:0%;
+    right:-10%;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color1) 50%, rgba(0, 0, 0, 0) 100%);
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern #mobile-header h1::after{
+    content:"";
+    position:absolute;
+    height: 2%;
+    width:120%;
+
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color2) 50%, rgba(0, 0, 0, 0) 100%);
+    bottom:0;
+    right:-10%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+
+
+
+
+body.modern #mobile-header h1:hover::before{
+    opacity:0;
+}
+
+body.modern #mobile-header h1:hover::after{
+    scale:1.3;
+    opacity:1;
+    
+}
+
+#mobile-header  h2::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:3%;
+    bottom:0%;
+    right:-50%;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0) 0%, var(--middle-underline-color2) 50%, rgba(0, 0, 0, 0) 100%);
+    transition: --middle-underline-color 0.7s ease;
+    opacity:1;
+}
+
+body.modern #mobile-header  h2::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:3%;
+    bottom:0%;
+    right:-50%;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0) 0%, var(--middle-underline-color1) 50%, rgba(0, 0, 0, 0) 100%);
+    transition: --middle-underline-color 0.7s ease;
+    opacity:1;
+}
+
+
+body.modern #mobile-header h2::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:200%;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color2) 50%, rgba(0, 0, 0, 0) 100%);
+    bottom:0;
+    right:-50%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern #mobile-header h2:hover::before{
+    opacity:0;
+    
+}
+
+body.modern #mobile-header h2:hover::after{
+    scale:1.4;
+    opacity:1;
+    
+}
+
+.treime{
+    overflow:hidden;
+}
+
+#stanga{
+    border-right: 0.2em solid /*rgb(163, 149, 149);*/ var(--border-color); 
+    
+    height:100vh;
+
+    background-color:var(--good-color)
+}
+#dreapta{
+    border-left: 0.2em solid /*rgb(163, 149, 149); */ var(--border-color);
+    background-color:var(--good-color);
+    
+   
+}
+
+#mijloc{
+    box-sizing:border-box;
+    height:100vh;
+}
+
+#stanga-sus{
+    width:100%;
+    height:20%;
+    
+
+    display:flex;
+    flex-direction: column;     
+    justify-content: center;  
+    align-items: flex-end;    
+    padding-right: 5%;       
+    box-sizing: border-box;
+    
+    overflow:hidden; 
+
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none; 
+    
+}
+
+#stanga-sus h1{
+    font-family: "IM Fell Double Pica SC", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.5rem, 3.5vw, 3em);
+    text-align:right;
+    margin:0;
+    display:inline-block;
+    position:relative;
+    color: #111317;
+    transition: scale 1s ease;
+    font-weight: bold;
+    
+}
+
+body.modern #stanga-sus h1{
+    font-family:  "Cinzel", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.5rem, 3.5vw, 3em);
+    text-align:right;
+    margin:0;
+    display:inline-block;
+    position:relative;
+    color: #111317;
+    transition: scale 1s ease;
+    font-weight: bold;
+    
+}
+
+#stanga-sus h2{
+    font-family: "IM Fell Double Pica SC", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.1rem, 2.5vw, 2.5em);
+   text-align:right;
+   margin:0;
+   position:relative;
+   display:inline-block;
+   transition: scale 1s ease;
+   color: rgb(5, 1, 1);
+   font-weight:bold;
+}
+
+body.modern #stanga-sus h2{
+    font-family:  "Cinzel", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.1rem, 2.5vw, 2.5em);
+   text-align:right;
+   margin:0;
+   position:relative;
+   display:inline-block;
+   transition: scale 1s ease;
+   color: rgb(5, 1, 1);
+   font-weight:bold;
+}
+
+#stanga-sus  h1::before{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:3%;
+    bottom:0%;
+    right:-10%;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color2) 50%);
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern  #stanga-sus  h1::before{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:3%;
+    bottom:0%;
+    right:-10%;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color1) 50%);
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern #stanga-sus h1::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:140%;
+
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color2) 50%);
+    bottom:0;
+    left:10%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+
+
+
+
+body.modern #stanga-sus h1:hover::before{
+    opacity:0;
+}
+
+body.modern #stanga-sus h1:hover::after{
+    scale:1.3;
+    opacity:1;
+    
+}
+
+#stanga-sus  h2::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:3%;
+    bottom:0%;
+    right:-40%;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0) 0%, var(--middle-underline-color2) 50%);
+    transition: --middle-underline-color 0.7s ease;
+    opacity:1;
+}
+
+body.modern #stanga-sus  h2::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:3%;
+    bottom:0%;
+    right:-40%;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0) 0%, var(--middle-underline-color1) 50%);
+    transition: --middle-underline-color 0.7s ease;
+    opacity:1;
+}
+
+
+body.modern #stanga-sus h2::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:400%;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color2) 50%, rgba(0, 0, 0, 0) 100%);
+    bottom:0;
+    left:0%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern #stanga-sus h2:hover::before{
+    opacity:0;
+    
+}
+
+body.modern #stanga-sus h2:hover::after{
+    scale:1.4;
+    opacity:1;
+    
+}
+
+ #separator1{
+    position: relative;
+    width:100%;
+    height: 0.2em;
+    background: var(--border-color);
+       
+    top:2%;
+}
+
+body.modern #separator1{
+    position: relative;
+    width:100%;
+    height: 0.2em;
+    background: linear-gradient(
+        to right, transparent, var(--border-color)
+        );
+    top:2%;
+}
+#separator2{
+    position: relative;
+    width:100%;
+    height: 0.2em;
+    background: var(--border-color);
+    top:2%;
+    top:2%;
+}
+#separator3{
+    position: relative;
+    width:80%;
+    height: 0.2em;
+    background: linear-gradient(
+        to right, transparent, var(--border-color)
+        );
+    top:3%;
+
+    transition: all 0.7s ease;
+}
+
+
+
+
+/* Poeziiiiii lista stanga ********************************************************/
+
+#card-poezii{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2rem;
+    
+    margin-top: 5%;
+    margin-left:5%;
+
+    height: 77vh;
+
+    overflow-y:auto;
+}
+
+/*#lista-poezii{
+    box-sizing:border-box;
+    margin:0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}    */
+
+.coloana{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-align: center;
+}
+
+.coloana input{
+    display:none;
+}
+
+.coloana ul{
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+      margin-left: auto;
+    padding:0;
+    padding-top:10%;
+    padding-bottom:10%;
+}
+
+.coloana label{
+    cursor: default;
+}
+
+
+
+body.modern .coloana ul{
+  list-style-type: none;
+  margin-left: auto;
+  padding:0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+
+}   
+
+.coloana li{
+  list-style-type: none;
+   margin-bottom:1rem;
+    margin-top:1rem;
+    
+}
+
+body.modern .coloana li{
+  list-style-type: none;
+   margin-bottom:1.5rem;
+    margin-top:1.5rem;
+}
+
+
+.coloana label{
+    font-family:  'Times New Roman', Times, serif;
+    font-size: 2em;
+    display: block; 
+    color:#000c14;
+   
+    
+    
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none; 
+
+}
+
+
+body.modern .coloana label{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2em;
+    display: block; 
+    color:#cbcfd2c9;
+    font-weight:bold;
+    
+    
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none; 
+
+}
+
+.coloana a{
+    font-size:1.2em;
+}
+
+body.modern .coloana a{
+    text-decoration: none;
+    font-family:"EB Garamond", serif;
+    color:#BFC4C8;
+    font-style:italic;
+    transition: color 0.5s ease, transform 0.5s ease, color 0.5s ease;
+    position:relative;
+    z-index:9999;
+}
+
+body.modern .coloana a::before{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2%;
+    bottom:0;
+    left:50%;
+    background-color: #A6A6A6;
+    transition: all 0.4s;
+}
+
+body.modern .coloana a:hover::before{
+    width:100%;
+    left:0;
+}
+.coloana a:hover{    /* Color *******************************************************************************/
+    opacity: 2;
+    color:#2b4e7c;
+}
+
+body.modern .coloana a:hover{
+    opacity: 2;
+    color:#F0F3F7;
+}
+
+
+  efect  nr1 js
+    
+body.modern .hovering li{
+    opacity:.4;
+    transform:scale(.9);
+    transition:.3s;
+}
+
+body.modern .hovering li:hover{
+    opacity:1;
+    transform:scale(1.05);
+}
+
+body.modern .hovering li:hover a{
+    color:#fff;
+} 
+
+
+
+
+
+
+
+.coloana input{
+    display:none;
+}
+
+
+body.modern .coloana input:checked ~ ul{
+    max-height:500px;
+    opacity:1;
+}
+
+.coloana .opener{
+    position: relative;  /*efect hover*/
+
+
+    display:block;
+   
+    
+}
+
+body.modern .coloana .opener{
+    position: relative;  /*efect hover*/
+
+
+    display:block;
+    cursor:pointer;
+    transition:.25s;
+}
+
+body.modern .coloana input:checked + .opener{
+    color:#FFFFFF;      
+    transform: scale(1.35); 
+}
+
+
+
+
+.coloana .opener::before{   /* COLORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR*********/
+    content:"";
+    position:absolute;
+    width:80%;
+    height:3%;
+    bottom:0%;
+    left:10%;
+    background: var(--middle-underline-color2) 50%;
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern .coloana .opener::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:3%;
+    bottom:0%;
+    left:0%;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color1) 50%, rgba(0, 0, 0, 0) 100%);
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern .coloana .opener::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:100%;
+
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color2) 50%, rgba(0, 0, 0, 0) 100%);
+    bottom:0;
+    left:0%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+
+
+
+
+body.modern .coloana .opener:hover::before{
+    opacity:0;
+}
+
+body.modern .coloana .opener:hover::after{
+    transform:scaleX(1.2);
+    transform: scaleY(1.5);
+    opacity:1;
+    
+}
+/* optional-neanimat #lista-poezii ul,
+#lista-poezii input,
+#lista-poezii .closer,
+#lista-poezii input:checked~.opener{
+  display:none;
+}
+
+#lista-poezii input:checked~ul,
+#lista-poezii input:checked~.closer{
+  display:block;
+}
+
+*/
+/* list lista cu volume, dropdown la versiune modern + link, doar link la versiune veche + link verzui*/
+
+
+
+
+.freedom{
+    font-size:1.2em;
+}
+
+
+
+
+/* Mijloc *******************************************************************/
+
+#relations{
+    width:100%;
+    height:20%;
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+
+#header{
+    width:47%;
+    height:100%;
+    
+    
+
+    display:flex;
+    flex-direction: column;     
+    justify-content: center;  
+       align-items: flex-start;    
+    padding-left: 3%;       
+    box-sizing: border-box;
+    
+    overflow:hidden; 
+
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none; 
+    
+}
+
+
+#header2{
+    width:47%;
+    height:100%;
+    
+    
+
+    display:flex;
+    flex-direction: column;     
+    justify-content: center;  
+       align-items: flex-end;    
+    padding-right: 0%;       
+    box-sizing: border-box;
+    
+    overflow:hidden; 
+
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none; 
+    
+}
+
+/*.home-button{
+    font-family: "IM Fell Double Pica SC", serif;
+    font-size: clamp(1.5rem, 3.5vw, 3em);
+    text-align:left;
+    margin:0;
+    display:inline-block;
+    position:relative;
+    color: #111317;
+    transition: scale 1s ease;
+    font-weight: bold;
+    text-decoration: none;
+    width:fit-content;
+    transform:translateY(-10%)
+}
+
+
+#header .home-button::before{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:3%;
+    bottom:0%;
+    left:-20%;
+    background: linear-gradient(270deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color1) 50%);
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+#header .home-button::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:10%;
+
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color2) 50%);
+    bottom:0;
+    left:10%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+
+
+
+
+#header .home-button:hover::before{
+    opacity:0;
+}
+
+#header .home-button:hover::after{
+    scale:1.3;
+    opacity:1;
+    
+} */
+
+
+.home-button{
+    display: inline-block;
+    width: fit-content;
+}
+
+/* HEADERRRRRRR**********************************************************************************************/
+
+#header h1{
+    font-family: "IM Fell Double Pica SC", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.5rem, 3.5vw, 3em);
+    text-align:right;
+    margin:0;
+    display:inline-block;
+    position:relative;
+    color: #111317;
+    transition: scale 1s ease;
+    font-weight: bold;
+    transform: translateY(-15%);
+    
+}
+
+body.modern #header h1{
+    font-family: "Cinzel", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.5rem, 3.5vw, 3.1em);
+    text-align:right;
+    margin:0;
+    display:inline-block;
+    position:relative;
+    color: #111317;
+    transition: scale 1s ease;
+    font-weight: bold;
+    transform: translateY(-15%);
+    
+}
+
+
+#header h2{
+    font-family: "IM Fell Double Pica SC", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.1rem, 2.5vw, 2.5em);
+   text-align:right;
+   margin:0;
+   position:relative;
+   display:inline-block;
+   transition: scale 1s ease;
+   color: rgb(5, 1, 1);
+   font-weight:bold;
+   transform:translateY(18%)
+}
+
+body.modern #header h2{
+    font-family:  "Cinzel", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.1rem, 2.5vw, 2.5em);
+   text-align:right;
+   margin:0;
+   position:relative;
+   display:inline-block;
+   transition: scale 1s ease;
+   color: rgb(5, 1, 1);
+   font-weight:bold;
+   transform:translateY(18%)
+}
+
+#header h1::before{
+    content:"";
+    position:absolute;
+    width:150%;
+    height:3%;
+    bottom:0%;
+    left:-40%;
+    background: linear-gradient(to left,rgba(155, 89, 89, 0) 0%,var(--middle-underline-color1) 50%);
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern #header h1::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:180%;
+
+    background: linear-gradient(to left,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color3)50%);
+    bottom:0;
+    left:-40%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+
+
+
+
+body.modern #header h1:hover::before{
+    opacity:0;
+}
+
+body.modern #header h1:hover::after{
+    scale:1.3;
+    opacity:1;
+    
+}
+
+
+
+#header  h2::before{
+    content:"";
+    position:absolute;
+    width:130%;
+    height:3%;
+    bottom:0%;
+    left:-20%;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0) 0%, var(--middle-underline-color1) 50%);
+    transition: all 0.7s ease;
+    opacity:1;
+}
+
+body.modern #header  h2::before{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:3%;
+    bottom:3%;
+    left:-20%;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0) 0%, var(--middle-underline-color1) 50%);
+    transition: all 0.7s ease;
+    opacity:1;
+}
+
+
+body.modern #header h2::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:100%;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color3)50%);
+    bottom:3%;
+    left:0%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+body.modern  #header h2:hover::before{
+    opacity:0;
+    
+}
+
+body.modern #header h2:hover::after{
+    scale:1.3;
+    opacity:1;
+    
+}
+
+/* HEADERRRRRRR DOIIIIIIIIIIII**********************************************************************************************/
+
+#rusticBtn{
+        all:unset;
+    cursor:pointer;
+
+    font-family: "IM Fell Double Pica SC", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.5rem, 3.5vw, 3em);
+    text-align:right;
+    margin:0;
+    display:inline-block;
+    position:relative;
+    color: #111317;
+
+    transition: transform 0.6s ease, color 0.6s ease;
+
+    font-weight: bold;
+    transform: translateY(-8%);
+    padding-right:5%;
+    
+}
+
+#modernBtn{
+    all:unset;
+    cursor:pointer;
+
+    font-family: "Cinzel", serif; /* "Montenegrin Gothic One"*/
+    font-size: clamp(1.5rem, 3.5vw, 2.2em);
+   text-align:right;
+   margin:0;
+   position:relative;
+   display:inline-block;
+
+   transition: transform 0.6s ease, color 0.6s ease;
+
+   color: rgb(5, 1, 1);
+   font-weight:bold;
+   transform:translateY(28%);
+   padding-right:5%;
+}
+
+
+
+
+
+#rusticBtn.active{
+    transform: translateY(-8%) scale(1.3);
+    color:#033455;
+}
+
+#modernBtn.active{
+    transform: translateY(28%) scale(1.3);
+    color:#555555;
+}
+/*#header2 h1::before{
+    content:"";
+    position:absolute;
+    width:150%;
+    height:3%;
+    bottom:-10%;
+    left:-40%;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0) 0%, var(--middle-underline-color1) 50%, rgba(0, 0, 0, 0) 100%);
+    
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+#header2 h1::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:180%;
+
+    background: linear-gradient(to left,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color3)50%, rgba(0, 0, 0, 0) 100%);
+    bottom:-10%;
+    left:-40%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+ 
+
+
+
+#header2 h1:hover::before{
+    opacity:0;
+}
+
+#header2 h1:hover::after{
+    scale:1.3;
+    opacity:1;
+    
+}
+ */
+
+/* #header2  h2::before{
+    content:"";
+    position:absolute;
+    width:130%;
+    height:3%;
+    bottom:0%;
+    left:-10%;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0) 0%, var(--middle-underline-color1) 50%, rgba(0, 0, 0, 0) 100%);
+    transition: all 0.7s ease;
+    opacity:1;
+}
+
+
+#header2 h2::after{
+    content:"";
+    position:absolute;
+    height: 3%;
+    width:150%;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0) 0%,var(--middle-underline-color3)50%, rgba(0, 0, 0, 0) 100%) ;
+    bottom:0;
+    left:0%;
+
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.7s ease;
+}
+
+#header2 h2:hover::before{
+    opacity:0;
+    
+}
+
+#header2 h2:hover::after{
+    scale:1.3;
+    opacity:1;
+    
+}
+  */
+
+
+
+
+/* Mijloc poezie titlu *************************************************************************************/
+
+
+body.modern #poem{
+    overflow-y:auto;
+}
+
+#poem{
+    position:relative;
+    text-align:center;
+    width:100%;
+    max-height:77vh;
+    
+    /*height: 100vh; */
+/*padding-top:3%; */
+margin-top:3%;
+    
+    display:flex;
+    
+    align-items: center;
+    flex-direction: column;
+    
+    overflow-y:auto;
+}
+
+#titlu{
+    
+    width:100%;
+    
+}
+
+#poezie{
+   
+    text-align:left;
+
+}
+ 
+#titlu h1{
+    font-family:  "EB Garamond" ,serif;
+    font-size: 3em;
+}
+body.modern #titlu h1{
+    font-family:"Cinzel",serif;
+    font-size:3em;
+}
+
+
+
+body.modern #strofe{
+    font-family:  "Montserrat", sans-serif;
+    font-size:1.6em;
+    font-weight:500;
+}
+
+#strofe{
+    font-family:   "Baskervville",serif;
+    font-size:1.8em;
+    font-weight:600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Dreapta Imagine ****************************************************************************/
+
+
+#dreapta{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:5rem;
+    box-sizing:border-box;
+}
+
+
+#imagine{     /*Colorrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr***************/
+    display:flex;
+    justify-content:center;
+    width:40%;
+    
+    max-width:320px;
+    padding:1%;
+    background:#534637;
+    box-shadow:
+        0 0 0 2px #4B392B,
+        0 0 0 8px #E8E0D1;
+
+        transition:all 1s ease;
+}
+
+body.modern #imagine{
+    display:flex;
+    justify-content:center;
+    width:40%;
+    
+    max-width:320px;
+    padding:1%;
+    background:#5a5656;
+    box-shadow:
+        0 0 0 2px #2d2b2b,
+        0 0 0 8px #555555;
+}
+
+#imagine img{
+    width:100%;
+    display:block;
+    border: 1px double black;
+    position: relative;
+}
+
+/*    --primary-bg-color: #E8E0D1;      /* hârtie veche */
+ /*   --good-color: #7e6a53;            /* maro-gri cald */
+   /* --border-color: #4B392B;          /* lemn închis */
+
+    
+
+
+
+
+
+@media(max-width:1100px){
+
+
+.treime{
+    width:100%;
+    
+}
+    
+    
+    #stanga{
+    order:3;
+}
+
+#mijloc{
+    padding-top:2%;
+    order:2;
+}
+
+#separator2{
+    margin-top:2%;
+}
+
+#relations{
+    height:8em;
+}
+
+    
+    
+    
+    
+    body{
+        display:flex;
+        flex-direction:column;
+        height:auto;
+        min-height:100vh;
+        width:100vw;
+        overflow-y:auto;
+    }
+
+    #stanga,
+    #mijloc{
+        width:100%;
+        height:auto;
+        overflow:visible;
+    }
+
+    #card-poezii,
+    #poem{
+        height:auto;
+        overflow:visible;
+    }
+      #poem{
+        position:static;
+        display:flex;
+        align-items:center;
+        width:100%;
+        height:auto;
+        max-height:none;
+
+        margin-top:0;
+        padding:3rem 0;
+
+        overflow:visible;
+    }
+
+    #titlu{
+        position:static;
+        width:100%;
+        margin-bottom:2rem;
+    }
+
+    #poezie{
+        position:static;
+        transform:none;
+
+        width:85%;
+        margin:0 auto;
+    }
+
+    #strofe{
+        position:static;
+        margin-top:2em;
+    
+        text-align:left;
+    }
+
+
+
+    #dreapta{
+        display:none;
+    }
+        #mobile-header{
+        display:block;
+    }
+
+    #stanga-sus{
+        display:none;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
