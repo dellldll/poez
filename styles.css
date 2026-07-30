@@ -316,8 +316,12 @@ body.modern #mobile-header h2:hover::after{
     border-right: 0.2em solid /*rgb(163, 149, 149);*/ var(--border-color); 
     
     height:100vh;
+   
 
-    background-color:var(--good-color)
+    
+
+
+    background-color:var(--good-color);
 }
 #dreapta{
     border-left: 0.2em solid /*rgb(163, 149, 149); */ var(--border-color);
@@ -565,6 +569,7 @@ body.modern #separator1{
     height: 77vh;
 
     overflow-y:auto;
+    overflow-x:hidden;
 }
 
 /*#lista-poezii{
