@@ -1434,13 +1434,23 @@ body.modern #imagine{
         min-height:100vh;
         width:100vw;
         overflow-y:auto;
+        overflow-x:hidden;
     }
+    body.modern{
+        overflow-x:hidden;
+    }
+    
+
 
     #stanga,
     #mijloc{
         width:100%;
         height:auto;
         overflow:visible;
+    }
+    #stanga{
+        overflow:hidden;
+        border-right:none;
     }
 
     #card-poezii,
@@ -1510,6 +1520,26 @@ body.modern #imagine{
     color:#555555;
 }
 
+}
+
+
+
+@media(max-width:500px){
+    #strofe{
+        font-size:1em;
+    }
+    body.modern #strofe{
+        font-size:1em;
+    }
+}
+
+@media(max-width:400px){
+    body.modern #strofe{
+        font-size:0.8em;
+    }
+    #strofe{
+        font-size:0.8em;
+    }
 }
 
 
